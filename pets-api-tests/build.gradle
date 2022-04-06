@@ -1,0 +1,34 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.jlleitschuh.gradle.ktlint' version '10.2.1'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    restAssuredVersion = "5.0.0"
+    kotestVersion = "5.2.2"
+    jacksonVersion = "2.13.2"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation "io.rest-assured:rest-assured:$restAssuredVersion"
+    testImplementation "io.rest-assured:json-path:$restAssuredVersion"
+    testImplementation "io.rest-assured:kotlin-extensions:$restAssuredVersion"
+    testImplementation "io.kotest:kotest-runner-junit5-jvm:$kotestVersion"
+    testImplementation("io.kotest:kotest-property:$kotestVersion")
+    // it's strange, but serialization doesn't work without these deps
+    // TODO: need to investigate
+    testImplementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    testImplementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
+}
