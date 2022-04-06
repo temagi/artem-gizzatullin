@@ -6,7 +6,7 @@
 
 # Monefy manual test:
 
-###1. Exploratory testing
+### 1. Exploratory testing
 
 I will put just a kind of check-list with high-level descriptions
 * Basic functionality (records CRUD):
@@ -35,11 +35,11 @@ I will put just a kind of check-list with high-level descriptions
     * accountds CRUD
     * transfer between accounts
 
-###2. Bugs
+### 2. Bugs
 I didn't meet any serious bug, maybe only some animation could be discussable (for example, after adding new records it looks strange sometimes)
 I guess, the most interesting things could be in the custom categories, few currency budget and synchronization things, but it requires paid account
 
-###3. Priority
+### 3. Priority
 
 There are few question we should answer for understand the priority of things to tests:
 * basic functionality
@@ -50,12 +50,12 @@ So, in the case of Monefy app, im my opinion, there are few key things should to
 * Paid functions (custom categories, sync, custom currency, etc). Because of paid functions brings money to company, we should satisfy customers who paid for that
 * All the other things
 
-###4. Time planned
+### 4. Time planned
 Because of simplicity of the app, it could take not too much time for test, about 3-4 hours for tests all things for the free account.
 Meanwhile, it is a mobile app, that means, we should test it with a big count of different devices for 2 platform.
 In this case, most part of the time will be spent for device compatibility testing
 
-###5. Risks
+### 5. Risks
 
 This is a little bit strange section, because I'm not sure what should be placed here.
 From one hand, if we talk about SD process at all, there is a risk every time when new version released, so, it requires kind of regression testing.
